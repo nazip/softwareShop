@@ -1,0 +1,30 @@
+{
+  "name": "softwareShop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config ./initializers/webpack/build.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@storybook/react": "^3.0.1",
+    "css-loader": "^0.28.4",
+    "eslint": "^3.19.0",
+    "eslint-plugin-destructuring": "^2.1.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-react": "^7.0.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.18.2",
+    "webpack": "^2.6.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
