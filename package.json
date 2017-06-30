@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config ./initializers/webpack/build.js",
+    "start-dev": "webpack-dev-server --env development",
+    "build-dev": "webpack --env development",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -12,20 +13,28 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@storybook/react": "^3.0.1",
+    "@storybook/addon-info": "^3.1.6",
+    "@storybook/addon-knobs": "^3.1.6",
+    "@storybook/react": "^3.1.7",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.4",
-    "eslint": "^3.19.0",
+    "eslint": "^4.1.1",
     "eslint-plugin-destructuring": "^2.1.0",
-    "eslint-plugin-import": "^2.3.0",
-    "eslint-plugin-react": "^7.0.1",
-    "node-sass": "^4.5.3",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
+    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-react": "^7.1.0",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.18.2",
-    "webpack": "^2.6.1"
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.5.0"
   },
   "dependencies": {
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   }
 }
