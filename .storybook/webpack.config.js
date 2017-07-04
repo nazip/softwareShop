@@ -11,8 +11,34 @@ module.exports = {
     // your custom plugins
   ],
   module: {
-    loaders: [
-      // add your custom loaders.
-    ],
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      },
+      {
+        test: [/\.css$/],
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          "file-loader?hash=sha512&digest=hex&name=[hash].[ext]",
+          "image-webpack-loader?bypassOnDebug&optipng: {optimizationLevel=7}&gifsicle: {interlaced=false}"
+        ]
+      },
+      { test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        use: [
+          {
+            loader: 'url-loader?limit=100000'
+          }
+        ]
+      }
+    ]
   },
 };
