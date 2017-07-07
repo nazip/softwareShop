@@ -4,53 +4,42 @@ import '../node_modules/semantic-ui-css/semantic.min.css';
 import { storiesOf, addDecorator } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 // import { linkTo } from '@storybook/addon-links';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import { withKnobs, text } from '@storybook/addon-knobs';
 
-import { Form } from 'semantic-ui-react';
-import InputText from '../src/components/form/InputText';
-import CheckBox from '../src/components/form/CheckBox';
-import RadioGroup from '../src/components/form/RadioGroup';
+import InputText from '../src/components/InputText';
+import CheckBox from '../src/components/CheckBox';
+import RadioGroup from '../src/components/RadioGroup';
+import Img from '../src/components/Img';
 
-const FormDecorator = (func) => (
-  <Form>
-    {func()}
-  </Form>
-);
-
-addDecorator(FormDecorator);
 addDecorator(withKnobs);
 
-storiesOf('Form', module)
+storiesOf('Components', module)
   .addWithInfo('InputText','ввод текста',
     () => <InputText
-      hint={text('hint','Hint example')}
-      placeholder={text('Placeholder','Placeholder example')}
-      label={text('label','Label example')}/>)
+      onChange={action('changed')}
+      value={'default value'}
+      name={'InputText'}
+      label={text('label','label example')}/>
+  )
   .addWithInfo('CheckBox','CheckBox',
     () => <CheckBox
-      label={text('label','CheckBox label')}
-      onChange={action('Changed')}/>
+      name={'CheckBox name'}
+      onClick={action('Clicked')}
+      label={text('label','CheckBox label')}/>
   )
   .addWithInfo('RadioGroup','RadioGroup',
     () => <RadioGroup
+      name={'CheckBox name'}
       checkBoxes={[
-        {
-          label: text('label1','checkBox1 label'),
-          name: text('name1','checkBox1 name')
-        },
-        {
-          label: text('label2','checkBox2 label'),
-          name: text('name2','checkBox2 name')
-        }
-      ]}
-      onChange={() => (boolean('onChange', false))}
-    />
+        {value: 'v1', label: 'l1'},
+        {value: 'v2', label: 'l2'},
+        {value: 'v3', label: 'l3'}]}
+      onClick={action('Clicked')}/>
+  )
+  .addWithInfo('Image','Image',
+    () => <Img
+      label={text('label','Image label')}
+      name={'CheckBox name'}
+      onClick={action('Clicked')}
+      src={'dog.jpg'}/>
   );
-
-// storiesOf('Button')
-//   .addWithInfo('example', 'with text',
-//     () => <Button onClick={action('clicked')}>
-//       { text('sssr', 'Hello Button') }
-//     </Button>)
-//   .add('with some emoji',
-//     () => <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>);
