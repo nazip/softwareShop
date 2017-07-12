@@ -1,24 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const InputText = ({onChange, label = '', name, defaultValue}) => (
+const InputCurrency = ({onChange, label, name, defaultValue}) => (
   <div className="ui labeled input">
     <div className="ui label">
-      {label}
+      {label || <i className="ruble icon"/> }
     </div>
     <input type="text"
+      placeholder="введите сумму"
       defaultValue={defaultValue}
-      placeholder="enter some text"
       name={name}
       onChange={onChange}/>
   </div>
 );
 
-InputText.propTypes = {
+InputCurrency.propTypes = {
   name: PropTypes.string,
+  defaultValue: PropTypes.number,
   label: PropTypes.string,
-  defaultValue: PropTypes.string,
   onChange: PropTypes.func.isRequired
 };
 
-export default InputText;
+export default InputCurrency;

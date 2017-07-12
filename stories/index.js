@@ -6,42 +6,33 @@ import { action } from '@storybook/addon-actions';
 // import { linkTo } from '@storybook/addon-links';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
-import InputText from '../src/components/InputText';
-import CheckBox from '../src/components/CheckBox';
-import RadioGroup from '../src/components/RadioGroup';
-import Img from '../src/components/Img';
+import { InputText, InputDate,
+  CheckBox, RadioGroup, InputCurrency, Img } from '../src/components';
 
 addDecorator(withKnobs);
 
 storiesOf('Components', module)
   .addWithInfo('InputText','ввод текста',
-<<<<<<< HEAD
-    () => <InputText 
-      onChange={action('changed')}
-      value={'default value'}
-      name={'InputText name'}
-=======
     () => <InputText
       onChange={action('changed')}
-      value={'default value'}
+      defaultValue={'default value'}
       name={'InputText'}
->>>>>>> 89ecd52a16a048aac340df3cd1b4df8beb081455
       label={text('label','label example')}/>
   )
   .addWithInfo('CheckBox','CheckBox',
     () => <CheckBox
       name={'CheckBox name'}
-      onClick={action('Clicked')}
+      onChange={action('Clicked')}
       label={text('label','CheckBox label')}/>
   )
   .addWithInfo('RadioGroup','RadioGroup',
     () => <RadioGroup
       name={'CheckBox name'}
-      checkBoxes={[
-        {value: 'v1', label: 'l1'},
-        {value: 'v2', label: 'l2'},
-        {value: 'v3', label: 'l3'}]}
-      onClick={action('Clicked')}/>
+      checkBoxLabel={[
+        text('label0','CheckBox label0'),
+        text('label1','CheckBox label1'),
+        text('label2','CheckBox label2')]}
+      onChange={action('Clicked')}/>
   )
   .addWithInfo('Image','Image',
     () => <Img
@@ -49,4 +40,17 @@ storiesOf('Components', module)
       name={'CheckBox name'}
       onClick={action('Clicked')}
       src={'dog.jpg'}/>
+  )
+  .addWithInfo('InputDate','ввод даты',
+    () => <InputDate
+      onChange={action('changed')}
+      name={'InputText'}
+      label={text('label','label example')}/>
+  )
+  .addWithInfo('InputCurrency','ввод валюты(руб.)',
+    () => <InputCurrency
+      onChange={action('changed')}
+      name={'InputCurrency'}
+      defaultValue={10}
+      label={text('label','label example')}/>
   );

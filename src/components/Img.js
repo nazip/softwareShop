@@ -2,13 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Img = ({ onClick, src, name, label = '' }) => (
-  <label>
-    <input type='image'
-      onClick={onClick}
-      src={src}
-      name={name}/>
-    {label}
-  </label>
+  <div class="ui small image">
+    <img src={src} onClick={onClick} name={name}/>
+    <label>{label}</label>
+  </div>
 );
 
 Img.propTypes = {
