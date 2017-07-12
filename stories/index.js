@@ -15,10 +15,17 @@ addDecorator(withKnobs);
 
 storiesOf('Components', module)
   .addWithInfo('InputText','ввод текста',
+<<<<<<< HEAD
     () => <InputText 
       onChange={action('changed')}
       value={'default value'}
       name={'InputText name'}
+=======
+    () => <InputText
+      onChange={action('changed')}
+      value={'default value'}
+      name={'InputText'}
+>>>>>>> 89ecd52a16a048aac340df3cd1b4df8beb081455
       label={text('label','label example')}/>
   )
   .addWithInfo('CheckBox','CheckBox',
