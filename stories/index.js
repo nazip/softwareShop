@@ -45,6 +45,7 @@ storiesOf('Components', module)
     () => <InputDate
       onChange={action('changed')}
       name={'InputText'}
+      defaultValue={text('default date', '2017-07-01')}
       label={text('label','label example')}/>
   )
   .addWithInfo('InputCurrency','ввод валюты(руб.)',

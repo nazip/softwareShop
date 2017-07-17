@@ -6,7 +6,7 @@ const InputCurrency = ({onChange, label, name, defaultValue}) => (
     <div className="ui label">
       {label || <i className="ruble icon"/> }
     </div>
-    <input type="text"
+    <input type="number"
       placeholder="введите сумму"
       defaultValue={defaultValue}
       name={name}
