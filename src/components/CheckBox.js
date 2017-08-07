@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CheckBox = ({label, name, onClick}) => (
-  <div>
+const CheckBox = ({label, name, onClick, checked}) => (
+  <div className="ui checkbox">
     <input type='checkbox'
       name={name}
-      onClick={onClick}>
-    </input>{label}
+      onClick={onClick}
+      checked={checked}>
+    </input>
+    <label>
+      {label}
+    </label>
   </div>
 );
 

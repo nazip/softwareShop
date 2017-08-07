@@ -7,6 +7,7 @@ import { action } from '@storybook/addon-actions';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
 import InputText from '../src/components/InputText';
+import InputCurrency from '../src/components/InputCurrency';
 import CheckBox from '../src/components/CheckBox';
 import RadioGroup from '../src/components/RadioGroup';
 import Img from '../src/components/Img';
@@ -17,9 +18,17 @@ storiesOf('Components', module)
   .addWithInfo('InputText','ввод текста',
     () => <InputText
       onChange={action('changed')}
-      value={'default value'}
+      value={text('value','some value')}
       name={'InputText'}
       label={text('label','label example')}/>
+  )
+  .addWithInfo('InputCurrency','ввод прайса',
+    () => <InputCurrency
+      onChange={action('changed')}
+      value={text('value','some value')}
+      name={'InputText'}
+      label={text('label','label example')}
+      currency={text('currency','руб')}/>
   )
   .addWithInfo('CheckBox','CheckBox',
     () => <CheckBox
@@ -31,9 +40,9 @@ storiesOf('Components', module)
     () => <RadioGroup
       name={'CheckBox name'}
       checkBoxes={[
-        {value: 'v1', label: 'l1'},
-        {value: 'v2', label: 'l2'},
-        {value: 'v3', label: 'l3'}]}
+        {label: 'l1'},
+        {label: 'l2', checked: true},
+        {label: 'l3'}]}
       onClick={action('Clicked')}/>
   )
   .addWithInfo('Image','Image',
