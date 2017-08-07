@@ -1,31 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const RadioGroup = ({checkBoxes, onClick, name}) => (
-  <div className="ui form">
-    <label>sssss</label>
-    <div className="grouped fields">
-      {checkBoxes.map((val) =>
-        <div className="field">
-          <div className="ui radio checkbox">
-            <input
-              type="radio"
-              name={name}
-              checked={val.checked || false}
-              onClick={onClick} />
-            <label>{val.label}</label>
-          </div>
-        </div>
-      )}
-    </div>
+const RadioGroup = ({checkBoxLabel, onChange, name}) => (
+  <div>
+    {checkBoxLabel.map((val) =>
+      <div class="ui radio checkbox">
+        <input type="radio" name={name} onChange={onChange}/>
+        <label>{val}</label>
+      </div>
+    )}
   </div>
 );
 
 
 RadioGroup.propTypes = {
   name: PropTypes.string,
-  checkBoxes: PropTypes.array,
-  onClick: PropTypes.func
+  checkBoxLabel: PropTypes.array,
+  onChange: PropTypes.func
 };
 
 export default RadioGroup;

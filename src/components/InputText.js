@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const InputText = ({onChange, label = '', name, value}) => (
+const InputText = ({onChange, label, name, defaultValue}) => (
   <div className="ui labeled input">
-    <div className="ui label">
-      {label}
-    </div>
+    {label ?
+      <div className="ui label">
+        {label}
+      </div> : null
+    }
     <input type="text"
-      value={value}
-      placeholder="enter some text"
+      defaultValue={defaultValue}
+      placeholder="введите текст"
       name={name}
       onChange={onChange}/>
   </div>
@@ -17,7 +19,7 @@ const InputText = ({onChange, label = '', name, value}) => (
 InputText.propTypes = {
   name: PropTypes.string,
   label: PropTypes.string,
-  value: PropTypes.string,
+  defaultValue: PropTypes.string,
   onChange: PropTypes.func.isRequired
 };
 
