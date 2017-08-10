@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CheckBox = ({label, name, onChange, checked = false}) => (
+const CheckBox = ({label, name, checked, onChange}) => (
   <div className="ui checkbox">
     <input type='checkbox'
       name={name}
       onChange={onChange}
-      checked={checked}>
-    </input>
+      checked={checked}
+    />
     <label>
       {label}
     </label>
@@ -17,8 +17,8 @@ const CheckBox = ({label, name, onChange, checked = false}) => (
 CheckBox.propTypes = {
   label: PropTypes.string,
   name: PropTypes.string,
-  checked: PropTypes.boolean,
-  onChange: PropTypes.func.isRequired
+  checked: PropTypes.bool,
+  onChange: PropTypes.func
 };
 
 export default CheckBox;
