@@ -1,14 +1,63 @@
 import React from 'react';
+import '../node_modules/semantic-ui-css/semantic.min.css';
 
-import { storiesOf } from '@storybook/react';
+import { storiesOf, addDecorator } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
+// import { linkTo } from '@storybook/addon-links';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import ImageFile from '../src/components/dog.jpg';
 
-import Button from './Button';
-import Welcome from './Welcome';
+import { InputText, InputDate,
+  CheckBox, RadioGroup, InputCurrency, Img } from '../src/components';
+import { Center } from './decorators';
 
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
+addDecorator(Center);
+addDecorator(withKnobs);
 
-storiesOf('Button', module)
-  .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-  .add('with some emoji', () => <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>);
+storiesOf('Components', module)
+  .addWithInfo('InputText','ввод текста',
+    () => <InputText
+      onChange={action('changed')}
+      defaultValue={'default value'}
+      name={'InputText'}
+      label={text('label','label example')}/>
+  )
+  .addWithInfo('CheckBox','CheckBox',
+    () => <CheckBox
+      name={'CheckBox name'}
+      checked={boolean('checked', false)}
+      onChange={action('Clicked')}
+      label={text('label','CheckBox label')}/>
+  )
+  .addWithInfo('RadioGroup','RadioGroup',
+    () => <RadioGroup
+      label={text('RadioGroup label', 'RadioGroup label')}
+      name={'CheckBox name'}
+      onChange={action('clicked')}
+      checkBoxes={[
+        {label: text('label0','label0')},
+        {label: text('label1','label1'), checked: true},
+        {label: text('label2','label2')}]}
+    />
+  )
+  .addWithInfo('Image','Image',
+    () => <Img
+      label={text('label','Image label')}
+      name={'CheckBox name'}
+      onClick={action('Clicked')}
+      src={ImageFile}/>
+  )
+  .addWithInfo('InputDate','ввод даты',
+    () => <InputDate
+      onChange={action('changed')}
+      name={'InputText'}
+      // defaultValue={date('default date', new Date('Jan 20 2017'))}
+      label={text('label','label example')}/>
+  )
+  .addWithInfo('InputCurrency','ввод валюты(руб.)',
+    () => <InputCurrency
+      onChange={action('changed')}
+      name={'InputCurrency'}
+      defaultValue={10}
+      label={text('label','label example')}/>
+  );
