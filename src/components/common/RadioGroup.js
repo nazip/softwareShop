@@ -6,7 +6,7 @@ const RadioGroup = ({label, checkBoxes, onChange, name}) => (
     {label || null}
     <div className='grouped fields'>
       {checkBoxes.map((val) =>
-        <div className='field'>
+        <div className='field' key={val.label}>
           <div className='ui radio checkbox'>
             <input type='radio'
               name={name}

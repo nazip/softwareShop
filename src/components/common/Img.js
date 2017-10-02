@@ -12,7 +12,7 @@ Img.propTypes = {
   name: PropTypes.string,
   label: PropTypes.string,
   src: PropTypes.string,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func
 };
 
 export default Img;

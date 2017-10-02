@@ -20,7 +20,7 @@ InputDate.propTypes = {
   name: PropTypes.string,
   defaultValue: PropTypes.string,
   label: PropTypes.string,
-  onChange: PropTypes.func.isRequired
-};
+  onChange: PropTypes.func
+};  
 
 export default InputDate;

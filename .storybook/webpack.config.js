@@ -39,8 +39,8 @@ module.exports = {
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         use: [
-          "file-loader?hash=sha512&digest=hex&name=[hash].[ext]",
-          "image-webpack-loader?bypassOnDebug&optipng: {optimizationLevel=7}&gifsicle: {interlaced=false}"
+          'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+          'image-webpack-loader?bypassOnDebug&optipng: {optimizationLevel=7}&gifsicle: {interlaced=false}'
         ]
       },
       { test: /\.(png|woff|woff2|eot|ttf|svg)$/,

@@ -8,7 +8,7 @@ const InputCurrency = ({onChange, label, name, defaultValue}) => (
     </div>
     <input type="number"
       placeholder="введите сумму"
-      defaultValue={defaultValue}
+      value={defaultValue || 0}
       name={name}
       onChange={onChange}/>
   </div>
@@ -18,7 +18,7 @@ InputCurrency.propTypes = {
   name: PropTypes.string,
   defaultValue: PropTypes.number,
   label: PropTypes.string,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func
 };
 
 export default InputCurrency;
