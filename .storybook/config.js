@@ -6,8 +6,6 @@ setAddon(infoAddon);
 
 function loadStories() {
   require('../stories');
-  // require('../stories/common');
-  // require('../stories/forms');
 }
 
 configure(loadStories, module);
