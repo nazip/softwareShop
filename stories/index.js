@@ -8,27 +8,14 @@ import { InputText, InputDate,
 import { Center } from './decorators';
 
 import '../node_modules/semantic-ui-css/semantic.min.css';
+import { InputTextStory } from './elements';
 
 // addDecorator(Center);
 addDecorator(withKnobs);
 
 storiesOf('Components', module)
   .addChapter('Elements', chapter => chapter
-    .addChapter('InputText', chapter => chapter
-      .addWithInfo('without label', 'InputText',
-        () => <InputText
-          onChange={action('changed')}
-          defaultValue={'default value'}
-          name={'InputText'}/>
-      )
-      .addWithInfo('with label', 'InputText',
-        () => <InputText
-          onChange={action('changed')}
-          defaultValue={'default value'}
-          name={'InputText'}
-          label={text('label','label example')}/>
-      )
-    )
+    .addChapter('InputText', InputTextStory)
   )
   .addChapter('Forms', chapter => chapter)
   .addChapter('Tables', chapter => chapter);
