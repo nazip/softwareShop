@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 // import { linkTo } from '@storybook/addon-links';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
-import { Product } from '../src/components/form';
+import { Product } from 'components/elements/forms';
 import { Center } from './decorators';
 
 addDecorator(Center);

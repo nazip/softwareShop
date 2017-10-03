@@ -14,7 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "@storybook/addon-actions": "3.1.2",
-    "@storybook/addon-chapters": "^0.6.2",
+    "@storybook/addon-chapters": "0.6.2",
     "@storybook/addon-info": "3.1.2",
     "@storybook/addon-knobs": "3.1.2",
     "@storybook/react": "3.1.2",
@@ -30,7 +30,6 @@
     "eslint-plugin-import": "^2.6.1",
     "eslint-plugin-react": "^7.4.0",
     "image-webpack-loader": "^3.4.2",
-    "react-storybook-addon-chapters": "^1.1.0",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.18.2",
     "webpack": "^2.7.0",
