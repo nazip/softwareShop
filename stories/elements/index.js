@@ -5,7 +5,7 @@ import { CheckBoxStory } from './CheckBox';
 import { InputCurrencyStory } from './InputCurrency';
 import { RadioGroupStory } from './RadioGroup';
 
-export  const ElementsStory = chapter => chapter
+export const ElementsStory = chapter => chapter
   .addChapter('InputText', InputTextStory)
   .addChapter('CheckBox', CheckBoxStory)
   .addChapter('Image', ImgStory)
