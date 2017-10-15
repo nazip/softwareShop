@@ -2,8 +2,8 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { CheckBox } from 'components/elements';
 import { text, boolean } from '@storybook/addon-knobs';
-import { specs, describe, it } from 'storybook-addon-specifications';
-import { mount } from 'enzyme';
+// import { specs, describe, it } from 'storybook-addon-specifications';
+// import { mount } from 'enzyme';
 // import expect from 'expect';
 
 
