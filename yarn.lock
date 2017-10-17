@@ -17,6 +17,15 @@
     react-inspector "^2.2.0"
     uuid "^3.1.0"
 
+"@storybook/addon-chapters@^0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-chapters/-/addon-chapters-0.6.2.tgz#f092176a81f261ba2effdf53205beb2568f51dc6"
+  dependencies:
+    "@storybook/addon-links" "^3.1.2"
+    "@storybook/addons" "^3.1.2"
+    prop-types "^15.5.10"
+    storybook-adk "^0.7.8"
+
 "@storybook/addon-info@3.2.12":
   version "3.2.12"
   resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.2.12.tgz#0600393398590dcc64fc1d24e509487f424e8354"
@@ -4835,10 +4844,6 @@ jest@^21.2.1:
   dependencies:
     jest-cli "^21.2.1"
 
-jquery@x.*:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
-
 js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.3.2.tgz#a79a923666372b580f8e27f51845c6f7e8fbfbaf"
@@ -7182,12 +7187,6 @@ selfsigned@^1.9.1:
   dependencies:
     node-forge "0.6.33"
 
-semantic-ui-css@^2.2.12:
-  version "2.2.12"
-  resolved "https://registry.yarnpkg.com/semantic-ui-css/-/semantic-ui-css-2.2.12.tgz#afc462e5bb4f8a0dcfe3dca11274499a997490dd"
-  dependencies:
-    jquery x.*
-
 semver-regex@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/semver-regex/-/semver-regex-1.0.0.tgz#92a4969065f9c70c694753d55248fc68f8f652c9"
@@ -7493,15 +7492,6 @@ storybook-adk@^0.7.8:
     podda "^1.2.2"
     prop-types "^15.5.10"
     react-komposer "2"
-
-storybook-chapters@nazip/storybook-chapters#master:
-  version "0.6.2"
-  resolved "https://codeload.github.com/nazip/storybook-chapters/tar.gz/e02f59b37fd1a200f3e22d76a63e5f923be064c3"
-  dependencies:
-    "@storybook/addon-links" "^3.1.2"
-    "@storybook/addons" "^3.1.2"
-    prop-types "^15.5.10"
-    storybook-adk "^0.7.8"
 
 stream-browserify@^2.0.1:
   version "2.0.1"
@@ -8248,8 +8238,8 @@ webpack-dev-server@^2.9.2:
     yargs "^6.6.0"
 
 webpack-hot-middleware@^2.19.1:
-  version "2.19.1"
-  resolved "https://registry.yarnpkg.com/webpack-hot-middleware/-/webpack-hot-middleware-2.19.1.tgz#5db32c31c955c1ead114d37c7519ea554da0d405"
+  version "2.20.0"
+  resolved "https://registry.yarnpkg.com/webpack-hot-middleware/-/webpack-hot-middleware-2.20.0.tgz#cb896d837758b6408fe0afeeafdc0e5316b15319"
   dependencies:
     ansi-html "0.0.7"
     html-entities "^1.2.0"

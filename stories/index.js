@@ -17,5 +17,6 @@ import React from 'react';
 
 storiesOf('React App', module)
   .addChapter('Atoms', chapter => chapter
-    .add('Atom 1', <p>1 </p>)
-    .add('Atom 2', <p>2 </p>));
+    .add('Atom 1', <buton>1</buton>)
+    .add('Atom 2', <buton>2</buton>)
+  );
