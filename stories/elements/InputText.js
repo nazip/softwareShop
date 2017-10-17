@@ -7,13 +7,13 @@ export const InputTextStory = chapter => chapter
   .addWithInfo('with label', 'InputText',
     () => <InputText
       onChange={action('changed')}
-      label={text('Label', 'some label')}
-      // defaultValue={'default value'}
-      name={'InputText'}/>
-  )
-  .addWithInfo('without label', 'InputText',
-    () => <InputText
-      onChange={action('changed')}
-      // defaultValue={'default value'}
-      name={'InputText'}/>
+      // label={text('Label', 'some label')}
+      // defaultValue={text('default value', 'default value')}
+      name='InputText'/>
   );
+  // .addWithInfo('without label', 'InputText',
+  //   () => <InputText
+  //     onChange={action('changed')}
+  //     // defaultValue={'default value'}
+  //     name={'InputText'}/>
+  // );

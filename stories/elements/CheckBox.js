@@ -8,13 +8,17 @@ import { text, boolean } from '@storybook/addon-knobs';
 
 
 export const CheckBoxStory = chapter => chapter
-  .addWithInfo('CheckBox','CheckBox',
+  .add('CheckBox',
     () => {
-      const story = (<CheckBox
-        name={'CheckBox name'}
-        checked={boolean('checked', false)}
-        onChange={action('Clicked')}
-        label={text('label','CheckBox label')}/>);
+      const story = (<button disabled={boolean('Disabled', false)} >
+        {text('Label', 'Hello Button')}
+      </button>);
+
+      // const story = (<CheckBox
+      //   name={text('CheckBox name', 'CheckBox name')}
+      //   checked={boolean('checked', false)}
+      //   onChange={action('Clicked')}
+      //   label={text('label','CheckBox label')}/>);
 
       // specs(() => describe('checkbox', () => {
       //   it('should have label',() => {
@@ -22,6 +26,7 @@ export const CheckBoxStory = chapter => chapter
       //     expect(output.txt()).toContain('CheckBox label');
       //   });
       // }));
+      console.log(story);
       return story;
     }
 
