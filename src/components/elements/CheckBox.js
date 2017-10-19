@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 
 const CheckBox = ({label, name, checked, onChange}) => (
   <div className="ui checkbox">
+    <label><div className="ui label">{ label }</div></label>
     <input type='checkbox'
       name={name}
       onChange={onChange}
       checked={checked}
     />
-    <label>
-      {label}
-    </label>
   </div>
 );
 

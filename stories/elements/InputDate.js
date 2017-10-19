@@ -8,6 +8,6 @@ export const InputDateStory = chapter => chapter
     () => <InputDate
       onChange={action('changed')}
       name='InputDate'
-      defaultValue={date('default date', new Date('Jan 20 2017'))}
+      value={date('default date', new Date('Jan 20 2017'))}
       label={text('label','label example')}/>
   );

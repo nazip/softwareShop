@@ -7,7 +7,7 @@ export const InputTextStory = chapter => chapter
   .addWithInfo('with label', 'InputText',
     () => <InputText
       onChange={action('changed')}
-      // label={text('Label', 'some label')}
+      label={text('Label', 'some label')}
       // defaultValue={text('default value', 'default value')}
       name='InputText'/>
   );

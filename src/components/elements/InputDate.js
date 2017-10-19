@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const InputDate = ({onChange, label, name, defaultValue}) => (
+const InputDate = ({onChange, label, name, value}) => (
   <div className="ui labeled input">
     {label ?
       <div className="ui label">
@@ -9,7 +9,7 @@ const InputDate = ({onChange, label, name, defaultValue}) => (
       </div> : null
     }
     <input type="date"
-      value={defaultValue}
+      value={value}
       placeholder={'enter date'}
       name={name}
       onChange={onChange}/>
@@ -18,9 +18,9 @@ const InputDate = ({onChange, label, name, defaultValue}) => (
 
 InputDate.propTypes = {
   name: PropTypes.string,
-  defaultValue: PropTypes.string,
+  value: PropTypes.string,
   label: PropTypes.string,
   onChange: PropTypes.func
-};  
+};
 
 export default InputDate;
