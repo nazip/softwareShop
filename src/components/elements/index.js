@@ -4,3 +4,5 @@ export {default as InputCurrency} from './InputCurrency';
 export {default as InputDate} from './InputDate';
 export {default as CheckBox} from './CheckBox';
 export {default as RadioGroup} from './RadioGroup';
+export {default as TextArea} from './TextArea';
+export {default as Description} from './Description';

@@ -1,26 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const InputText = ({onChange, label, name, value}) => (
+const TextArea = ({onChange, label, name, value, cols, rows}) => (
   <div className="ui labeled input">
     { label ?
       <div className="ui label">
         { label }
       </div> : null
     }
-    <input type="text"
-      value={value}
+    <textarea
+      // value={value}
       placeholder="введите текст"
       name={name}
+      cols={cols || 20}
+      rows={rows || 10}
       onChange={onChange}/>
   </div>
 );
 
-InputText.propTypes = {
+TextArea.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string,
   value: PropTypes.string,
+  col: PropTypes.integer,
+  row: PropTypes.integer,
   onChange: PropTypes.func
 };
 
-export default InputText;
+export default TextArea;

@@ -10,7 +10,7 @@ const InputCurrency = ({onChange, label, name, value}) => (
     }
     <input type="number"
       placeholder="введите сумму"
-      value={value}
+      // value={value}
       name={name}
       onChange={onChange}/>
     <div className="ui label">
