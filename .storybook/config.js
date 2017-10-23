@@ -1,9 +1,7 @@
 import { configure, setAddon } from '@storybook/react';
 import infoAddon from '@storybook/addon-info';
-import '@storybook/addon-chapters';
-
 import Enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-15';
+import Adapter from 'enzyme-adapter-react-16';
 
 Enzyme.configure({ adapter: new Adapter() });
 

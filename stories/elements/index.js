@@ -1,14 +1,7 @@
-import { InputTextStory } from './InputText';
-import { InputDateStory } from './InputDate';
-import { ImgStory } from './Img';
-import { CheckBoxStory } from './CheckBox';
-import { InputCurrencyStory } from './InputCurrency';
-import { RadioGroupStory } from './RadioGroup';
-
-export const ElementsStory = chapter  => chapter
-  .addChapter('CheckBox', CheckBoxStory)
-  .addChapter('Image', ImgStory)
-  .addChapter('InputCurrency', InputCurrencyStory)
-  .addChapter('RadioGroup', RadioGroupStory)
-  .addChapter('InputDate', InputDateStory)
-  .add('InputText', InputTextStory);
+export { InputTextStory } from './InputText';
+export { InputDateStory } from './InputDate';
+export { ImgStory } from './Img';
+export { CheckBoxStory } from './CheckBox';
+export { InputCurrencyStory } from './InputCurrency';
+export { RadioGroupStory } from './RadioGroup';
+export { LabelStory } from './Label';

@@ -2,10 +2,26 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 
 import '../node_modules/semantic-ui/dist/semantic.min.css';
-import { ElementsStory } from './elements';
-import { WidgetsStory } from './elements/widgets';
+import { CheckBoxStory,
+  InputCurrencyStory,
+  InputDateStory,
+  InputTextStory,
+  RadioGroupStory,
+  ImgStory } from './elements';
 
-storiesOf('Components', module)
-  .storyDecorator(withKnobs)
-  .addChapter('Elements', ElementsStory)
-  .addChapter('Widgets', WidgetsStory);
+import { ProductStory, ListOfProductsStory } from './elements/widgets';
+
+
+storiesOf('elements', module)
+  .addDecorator(withKnobs)
+  .add('CheckBox', CheckBoxStory)
+  .add('InputCurrency', InputCurrencyStory)
+  .add('InputDate', InputDateStory)
+  .add('InputText', InputTextStory)
+  .add('RadioGroup', RadioGroupStory)
+  .add('Image', ImgStory);
+
+storiesOf('widgets', module)
+  .addDecorator(withKnobs)
+  .add('Product', ProductStory)
+  .add('ListOfProducts', ListOfProductsStory);

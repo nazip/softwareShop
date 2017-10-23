@@ -7,5 +7,5 @@ export const InputTextStory = () =>
   <InputText
     onChange={action('changed')}
     label={text('Label', 'some label')}
-    // defaultValue={text('default value', 'default value')}
+    defaultValue={text('default value', 'default value')}
     name='InputText'/>;

@@ -1,46 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Description, InputText, InputCurrency, TextArea } from 'components/elements';
+import { InputText,
+  InputCurrency,
+  TextArea,
+  Label,
+  Img } from 'components/elements';
 
-const Product = ({name, os, vendor, price, description}) => (
+const Product = ({label = 'new product', os,
+  vendor, price, description, img}) => (
   <div className="product ui card ">
-    <div class="header">
-      {name.name}
-    </div>
-    <InputText {...name} />
+    <Label label={label}/>
+    <Img {...img}/>
     <InputText {...os}/>
     <InputText {...vendor} />
-    <Description value={description.value} />
+    <TextArea {...description} />
     <InputCurrency {...price} />
   </div>
 );
 
 Product.propTypes = {
-  name: PropTypes.shape({
-    name: PropTypes.string,
-    value: PropTypes.string,
-    label: PropTypes.string,
-    onChange:  PropTypes.func
-  }),
-  os: PropTypes.shape({
-    name: PropTypes.string,
-    value: PropTypes.string,
-    label: PropTypes.string,
-    onChange:  PropTypes.func
-  }),
-  vendor: PropTypes.shape({
-    name: PropTypes.string,
-    value: PropTypes.string,
-    label: PropTypes.string,
-    onChange:  PropTypes.func
-  }),
-  price: PropTypes.shape({
-    name: PropTypes.string,
-    value: PropTypes.string,
-    label: PropTypes.string,
-    onChange:  PropTypes.func
-  })
-
+  label: PropTypes.string,
+  img: PropTypes.object,
+  os: PropTypes.object,
+  price: PropTypes.object,
+  vendor: PropTypes.object,
+  description: PropTypes.object,
 };
 
 export default Product;
